@@ -1,0 +1,19 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.left_top-bar {
+  /* 왼쪽 상단 바에 위치 */
+  display: flex;
+}
+
+.right_top-bar {
+  /* 오른쪽 상단 바에 위치 */
+  display: flex;
+  }
+
+  .nav_area {
+    display: flex;
+    align-items:center;justify-content:space-between;
+  }
