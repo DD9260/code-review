@@ -21,56 +21,68 @@
         <!-- 오른쪽 -->
         <a href="#">Gmail</a>
         <a href="#">이미지</a>
-        <a href="#"><img src="../google app.svg" alt="Google App Logo" width="20"></a>
-        <a href="#">로그인</a>
+        <a href="#"><img src="../google app.svg" alt="Google App Logo" width="25"></a>
+        <!-- 로그인 버튼 생성 -->
+        <button class="login-btn">로그인</button>
       </div>
     </div>
   </header>
 
-  <img src="../google, logo.png" alt="Google Logo">
+    <div>
+        <!-- 구글로고 위치 가운데 배치를 위한 새로운 div 생성 -->
+        <div class="logo-container">
+            <img src="../google, logo.png" alt="Google Logo" width="320">
+        </div>
 
-  <!-- 검색창 -->
-  <div class="search-container">
-      <form action="https://www.google.com/search" method="get">
-          <!-- 돋보기 아이콘 및 텍스트 입력란 -->
-          <div>
-              <a href="#"><img src="../view.png" alt="Search Icon" width="20"></a>
-              <input type="text">
-          </div>
-
-          <!-- 아이콘들 (입력 도구, 음성 검색, 이미지 검색) -->
-          <div>
-              <a href="#"><img src="../keyboard.png" alt="key Search Icon" width="20"></a>
-              <a href="#"><img src="../voice.png" alt="voice Search Icon" width="20"></a>
-              <a href="#"><img src="../image.svg" alt="image Search Icon" width="20"></a>
-          </div>
-      </form>
-  </div>
+ <!-- 검색창 -->
+<div class="search-container">
+    <form action="https://www.google.com/search" method="get">
+        <!-- 돋보기 아이콘 및 텍스트 입력란 -->
+        <div class="search-input-wrapper">
+            <a href="#" class="search-icon-left"><img src="../view.png" alt="Search Icon" width="20"></a>
+            <input type="text" placeholder="검색어를 입력하세요">
+            <!-- 아이콘들 (입력 도구, 음성 검색, 이미지 검색) -->
+            <div class="search-icons-right">
+                <a href="#"><img src="../keyboard.png" alt="key Search Icon" width="20"></a>
+                <a href="#"><img src="../vioce search.png" alt="voice Search Icon" width="20"></a>
+                <a href="#"><img src="../image.svg" alt="image Search Icon" width="20"></a>
+            </div>
+        </div>
+    </form>
+</div>
 
   <!-- 사용용도 모름 -->
-  <div>
-      <a href="#">google 검색</a>
-      <a href="#">i'm feeling lucky</a>
+  <div class="button-container">
+    <button class="search-btn">google 검색</button>
+    <button class="lucky-btn">i'm feeling lucky</button>
   </div>
 
+    </div>
+  
   <!-- Footer Section -->
   <footer>
-      <!-- 사용국가 -->
-      <div>대한민국</div>
-
-      <!-- footer 하위 하이퍼링크 왼쪽 -->
-      <div>
-          <a href="#">광고</a>
-          <a href="#">비지니스</a>
-          <a href="#">검색의 원리</a>
+    <!-- 상단: 대한민국 -->
+    <div class="footer-top">
+      <div class="country">대한민국</div>
+    </div>
+  
+    <!-- 하단: 왼쪽과 오른쪽 섹션 -->
+    <div class="footer-bottom">
+      <!-- 왼쪽 -->
+      <div class="footer-left">
+        <a href="#">광고</a>
+        <a href="#">비지니스</a>
+        <a href="#">검색의 원리</a>
       </div>
-
-      <!-- footer 하위 하이퍼링크 오른쪽 -->
-      <div>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">약관</a>
-          <a href="#">설정</a>
+      
+      <!-- 오른쪽 -->
+      <div class="footer-right">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">약관</a>
+        <a href="#">설정</a>
       </div>
+    </div>
   </footer>
+  
 </body>
 </html>
