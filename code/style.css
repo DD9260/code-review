@@ -109,7 +109,7 @@ a:hover {
 }
 
 .search-icons-right a {
-  display: block;
+  display: block; 
 }
 
 /* 검색 버튼 스타일 */
@@ -148,47 +148,49 @@ a:hover {
 /* 버튼에 포커스가 되었을 때 스타일 */
 .search-btn:focus, .lucky-btn:focus {
   outline: none;  /* 기본 윤곽선 제거 */
-  box-shadow: 0 0 5px rgba(0, 0, 255, 0.6); /* 파란색 그림자 추가 */
 }
 
+/* Footer 스타일 */
 footer {
-  /* margin-top: 300px; footer와 본문 내용 사이의 간격 */
-  padding: 20px 0; /* padding으로 위아래 여백 추가 */
-  background-color: #f8f8f8; /* 배경색 */
-  font-size: 14px; /* 폰트 크기 */
-  color: #555; /* 텍스트 색상 */
-  position:absolute;bottom:0;
+  padding: 20px 40px;  /* 좌우 여백을 추가하여 양옆 공간 확보 */
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #555;
+  position: relative; /* 원래는 relative로 위치를 설정 */
   width: 100%;
+  margin-top: 50px;  /* footer와 본문 사이의 여백을 늘리기 위해 margin-top을 추가 */
+  /* 추가: 아래쪽으로 위치를 아래로 내리기 위한 마진 설정 */
 }
 
+/* footer-top은 그대로 두고, footer-bottom에 padding 추가 */
 .footer-top {
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬 */
-  padding-bottom: 10px; /* 아래쪽 여백 */
-}
-
-.footer-top .country {
-  font-weight: bold; /* 강조 표시 */
+  justify-content: flex-start;  /* 왼쪽 정렬 */
+  padding-bottom: 10px;  /* 아래쪽 여백 */
+  padding-left: 20px;  /* 왼쪽 여백 추가 */
+  padding-right: 20px;  /* 오른쪽 여백 추가 */
 }
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between; /* 왼쪽과 오른쪽으로 나누어 배치 */
-  padding-top: 10px; /* 위쪽 여백 */
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;  /* 왼쪽 여백 추가 */
+  padding-right: 20px;  /* 오른쪽 여백 추가 */
 }
 
 .footer-left,
 .footer-right {
   display: flex;
-  gap: 15px; /* 링크들 간의 간격 */
+  gap: 20px;  /* 링크들 간의 간격 */
 }
 
 .footer-left a, .footer-right a {
-  text-decoration: none; /* 밑줄 제거 */
-  color: #555; /* 텍스트 색상 */
+  text-decoration: none;
+  color: #555;
 }
 
 .footer-left a:hover, .footer-right a:hover {
-  text-decoration: underline; /* 호버시 밑줄 추가 */
+  text-decoration: underline;
 }
-
