@@ -1,0 +1,12 @@
+/* 전체 배경색을 검정색으로, 기본 글자 색을 하얀색으로 설정 */
+body {
+  background-color: #000;  /* 배경색을 검정색으로 설정 */
+  color: #fff;  /* 글자 색을 하얀색으로 설정 */
+  margin: 0;  /* 기본 여백 제거 */
+  padding: 0;  /* 기본 패딩 제거 */
+}
+
+.main_logo {
+  max-width: 8%;
+    height: auto;
+}
