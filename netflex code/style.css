@@ -59,6 +59,7 @@ body::before {
   align-items: center;  /* 수직 중앙 정렬 */
   justify-content: center; /* 가로 중앙 정렬 */
   width: 80px;
+  text-decoration: none;
 }
 
 .login_button:hover {
