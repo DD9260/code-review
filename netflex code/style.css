@@ -26,13 +26,16 @@ header > div {
 }
 
 body {
-  background-image: url('../background.jpg');
-  background-size: 120%; /* 이미지를 화면 크기에 맞게 조정 */
-  background-position: top; /* 이미지를 중앙에 위치 */
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), /* 아래에서 위로 희미해지는 그라디언트 */
+    url('../background.jpg');  /* 배경 이미지 */
+  background-size: 100%; /* 이미지를 화면 크기에 맞게 조정 */
+  background-position: top; /* 이미지를 상단에 위치 */
   background-repeat: no-repeat; /* 이미지를 반복하지 않음 */
   position: relative; /* 오버레이가 배경 위에 올 수 있도록 */
-  
+  color: #fff; /* 기본 글자 색상 */
 }
+
 
 body::before {
   content: ''; /* 비어있는 요소 */
@@ -135,14 +138,14 @@ body::before {
   flex-direction: column; /* 세로 방향으로 배치 */
   justify-content: center; /* 수직 중앙 정렬 */
   align-items: center; /* 수평 중앙 정렬 */
-  min-height: 60vh; /* 최소 높이를 브라우저 창 크기와 맞게 설정 */
+  min-height: 40vh; /* 최소 높이를 브라우저 창 크기와 맞게 설정 */
   text-align: center; /* 텍스트 수평 중앙 정렬 */
   margin: 0;
-  padding-top: 10px; /* 위쪽 여백을 줄여서 더 위로 올리기 */
+  padding-top: 0; /* 위쪽 여백을 줄여서 더 위로 올리기 */
 }
 
 .section-description h1 {
-  font-size: 38px; /* h1 글씨 크기 크게 설정 */
+  font-size: 50px; /* h1 글씨 크기 크게 설정 */
   margin: 0; /* 여백 없애기 */
   padding: 0; /* 여백 없애기 */
 }
@@ -151,6 +154,107 @@ body::before {
   font-size: 15px; /* h2 글씨 크기 작게 설정 */
   margin: 0; /* 여백 없애기 */
   padding: 0; /* 여백 없애기 */
+}
+
+/* 새로 추가할 박스 */
+.promo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: white; /* 텍스트 색상 */
+  padding: 20px;
+  margin: 140px auto; /* 위 아래 여백 */
+  border-radius: 8px;
+  width: 80%; /* 가로 길이 80%로 설정 */
+  transition: background-color 0.3s ease; /* 호버 시 부드러운 배경변경 */
+}
+
+.promo-box:hover {
+  background-color: #444; /* 호버 시 배경색 변경 */
+}
+
+.promo-text {
+  flex: 1;
+}
+
+.promo-text h3 {
+  font-size: 24px; /* 큰 텍스트 */
+  margin: 0 0 10px 0; /* 하단에만 여백 */
+}
+
+.promo-text p {
+  font-size: 14px; /* 작은 텍스트 */
+  margin: 0;
+}
+
+.promo-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: darkgray;
+}
+
+/* 슬라이더 전체 스타일 */
+.movie-slider {
+  margin: 50px auto; /* 상단 여백 추가 */
+  text-align: auto; /* 제목 중앙 정렬 */
+  max-width: 80%; /* 최대 너비 80% */
+}
+
+/* 슬라이더 항목 제목 */
+.movie-slider h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-left: 10px; /* 제목을 오른쪽으로 살짝 이동 */
+}
+
+/* 슬라이더 컨테이너 (스와이프 영역) */
+.slider-container {
+  display: flex; /* 수평 배치 */
+  overflow-x: scroll; /* 수평 스크롤 허용 */
+  overflow-y: hidden; /* 수직 스크롤을 숨김 */
+  scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
+  gap: 20px; /* 슬라이드 간 간격 */
+}
+
+/* 각 슬라이드 (영화 항목) */
+.slide {
+  background-color: rgba(255, 255, 255, 0.2); /* 약간 투명한 배경 */
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  scroll-snap-align: center; /* 스크롤 시 항목이 중앙에 오도록 */
+  transition: transform 0.3s ease; /* 호버 시 부드러운 확대 */
+  flex: 0 0 auto; /* 슬라이드가 고정 크기를 갖게 함 */
+  border-radius: 30px;
+  min-width: 100px; /* 슬라이드의 최소 너비 */
+  min-height: 100px; /* 슬라이드의 최소 높이 */
+  display: flex;  /* flex로 설정하여 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 슬라이드에 호버 효과 */
+.slide:hover {
+  transform: scale(1.1); /* 마우스를 올렸을 때 확대 */
+}
+
+/* 각 슬라이드 내 이미지 스타일 */
+.slide img {
+  max-width: 100%;  /* 이미지가 슬라이드의 너비를 넘지 않도록 제한 */
+  height: 280px;   
+  border-radius: 15px;  /* 이미지에 둥근 모서리 적용 */
+  object-fit: cover;  /* 이미지 비율을 유지하면서 영역을 채우도록 */
 }
 
 
