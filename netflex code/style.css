@@ -84,7 +84,6 @@ body::before {
 }
 
 
-.language_select_box,
 .login_button {
   margin-left: 10px; /* 두 요소 간의 간격 추가 */
 }
@@ -387,7 +386,7 @@ body::before {
 
 .customer-info {
   margin-left: 20px; /* 왼쪽 여백 */
-  margin-top: 20px; /* 상단 여백 */
+  margin-top: 50px; /* 상단 여백 */
   text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
@@ -420,5 +419,47 @@ body::before {
   transition: color 0.3s ease;
 }
 
+a {
+  color: white;  /* 링크 색상을 흰색으로 설정 */
+}
 
+a:hover {
+  color: white;  /* 호버 시에도 흰색으로 유지 */
+}
 
+.language_select_box_2 {
+  justify-content: flex-end;
+  background-color: black;
+  border-radius: 5px; /* 버튼 테두리 둥글게 설정 */
+  color: white;
+  padding: 5px; /* 셀렉트 박스에 여백 추가 */
+  font-size: 14px; /* 글자 크기 조정 */
+  width: 120px; /* 너비 설정 */
+  display: flex; /* flexbox로 수평 배치 */
+  align-items: center;  /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-left: 165px; /* 왼쪽 여백을 추가하여 오른쪽으로 이동 */
+  margin-top: 50px; /* 위쪽 여백을 추가하여 위 칸과 떨어뜨리기 */
+}
+
+.nation {
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+footer {
+  color: white;
+  padding: 20px;
+  font-size: 12px;
+  margin-left: 140px;
+}
+
+footer a {
+  color: white;/* 링크 색상 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* 마우스 오버 시 밑줄 */
+}
