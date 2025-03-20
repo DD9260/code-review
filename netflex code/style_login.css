@@ -3,20 +3,30 @@
   margin-left: 120px;
 }
 
+/* body와 html 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* 전체 화면을 100% 채우도록 설정 */
+  width: 100%;  /* 화면의 너비 100% */
+}
+
+
 body {
   color: white;
   background-image: url('../login_background.jpg');
-  background-size: 170%; /* 배경 이미지를 150% 확대 */
+  background-size: 170%; /* 배경 이미지를 170% 확대 */
   background-position: top center; /* 배경 이미지를 항상 위쪽에 위치하도록 설정 */
+  position: relative;  /* 부모 요소로부터 위치를 잡을 수 있도록 설정 */
 }
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;  /* 화면에 고정 */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* 투명 검정색 덧씌우기 */
   z-index: -1; /* 배경에 다른 요소가 가려지지 않도록 뒤에 배치 */
 }
@@ -35,11 +45,12 @@ section {
 
 .login_box {
   width: 450px;             /* 박스의 수평 길이 (필요시 조정) */
-  height: 757px;            /* 박스의 수직 길이 (필요시 조정) */
+  height: 709px;            /* 박스의 수직 길이 (필요시 조정) */
   background-color: rgba(0, 0, 0, 0.7); /* 투명 검정색 배경 (검정색 + 70% 투명도) */
   justify-content: center;
   box-sizing: border-box;     /* 패딩과 보더가 width와 height에 포함되도록 설정 */
   padding: 32px 70px;              /* 로그인 박스 안의 여백 (상하좌우) */
+  margin-bottom: 50px;        /* 아래쪽에 50px 여백 추가 */
 }
 
 
@@ -107,10 +118,62 @@ section {
 }
 
 .forgot_password {
-  color: white;
+  color:  white !important;
   margin-top: 15px;
   text-align: center;     /* 부모 요소에서 텍스트 가운데 정렬 */
+}
 
-  
+.forgot_password a:hover {
+  color: gray;
+}
+
+a {
+  color: inherit;  /* 부모 요소의 색상으로 상속 */
+}
+
+.remember_me {
+  margin-top: 20px;
+  font-size: 16px;
  
+}
+
+.text_2 {
+  font-size: 16px;
+  color:#888;
+}
+
+.signup_link {
+  color: white;  /* "지금 가입하세요." 텍스트 색상을 하얀색으로 설정 */
+  text-decoration: none;  /* 링크에 밑줄 제거 */
+}
+
+.text_3 {
+  color:#888;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.about_detail {
+  color:rgb(59, 136, 219);
+  font-size: 12px;
+}
+
+.footer {
+  background-color: rgb(26, 26, 26);
+  color:#b4b4b4;
+  margin: 0;
+  padding: 50px 30px; /* 위/아래 20px, 좌/우 50px 여백 추가 */
+  width: 100%;  /* 화면의 가로 폭을 100%로 설정 */
+  position: relative;  /* 풋터가 항상 바닥에 위치하도록 하기 위한 설정 */
+  bottom: 0; /* 풋터가 항상 화면 아래에 위치하도록 설정 */
+}
+
+.links-container {
+  display: flex; /* flexbox 적용 */
+  justify-content: space-between;
+  
+}
+
+.link-group {
+  font-size: 14px;
 }
