@@ -160,20 +160,64 @@ a {
 
 .footer {
   background-color: rgb(26, 26, 26);
-  color:#b4b4b4;
+  color: #b4b4b4;
   margin: 0;
-  padding: 50px 30px; /* 위/아래 20px, 좌/우 50px 여백 추가 */
-  width: 100%;  /* 화면의 가로 폭을 100%로 설정 */
-  position: relative;  /* 풋터가 항상 바닥에 위치하도록 하기 위한 설정 */
+  padding: 50px 150px; /* 위/아래 20px, 좌/우 50px 여백 추가 */
+  width: 100%; /* 화면의 가로 폭을 100%로 설정 */
+  position: relative; /* 풋터가 항상 바닥에 위치하도록 하기 위한 설정 */
   bottom: 0; /* 풋터가 항상 화면 아래에 위치하도록 설정 */
 }
 
-.links-container {
-  display: flex; /* flexbox 적용 */
-  justify-content: space-between;
-  
+* {
+  box-sizing: border-box; /* 패딩, 보더가 너비에 포함되도록 설정 */
+}
+
+.customer-info {
+  display: flex; /* flexbox를 사용하여 자식 요소들을 배치 */
+  flex-direction: column; /* 자식 요소들을 세로로 배치 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+.customer-info-text {
+  margin-top: 30px;
+  text-align: left; /* 왼쪽 정렬 */
 }
 
 .link-group {
+  width: 100%; /* 부모 요소의 너비에 맞게 */
+  display: flex; /* flexbox 사용 */
+  flex-direction: column; /* 세로 배치 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+
+.first-line, .second-line {
+  display: flex; /* 각 줄에서 가로로 배치 */
+  gap: 20px; /* 각 링크 사이 간격을 20px로 설정 (원하는 간격만큼 조정 가능) */
+  flex-wrap: wrap; /* 줄바꿈 가능하도록 설정 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin-bottom: 15px; /* 각 줄 사이에 마진을 두어 간격을 유지 */
+}
+
+.link-group a {
   font-size: 14px;
+  margin: 10px 15px; /* 상하 마진 10px, 좌우 마진 15px으로 간격을 확장 */
+}
+
+.language_select_box_2 {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.footer-content {
+  margin-top: 30px;
+  font-size: 11px;
+}
+
+.footer-content a {
+  text-decoration: none; /* 밑줄 제거 */
 }
