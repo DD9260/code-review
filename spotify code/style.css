@@ -1,0 +1,97 @@
+body {
+  background-color: rgb(18, 18, 18);
+  color: aliceblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top_function {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;  
+}
+
+.main_logo {
+  width: 50%; /* 원하는 픽셀 크기로 설정 */
+  height: 50%; /* 비율을 유지하려면 height를 auto로 설정 */
+  margin-left: 180px;  /* 좌측 여백 */
+}
+
+.main_logo img {
+  width: 25%;  /* 부모 요소의 크기에 맞게 이미지 크기 조정 */
+  height: auto; /* 이미지의 비율 유지 */
+}
+
+.top_btn {
+  align-items: center;
+  gap: 20px;
+  display: flex; 
+  margin-right: 180px;
+}
+
+.main_text {
+  position: relative;  /* main_text가 기준이 되도록 설정 */
+}
+
+.pink_bar {
+  height: 120px;                  /* 높이를 80px로 설정 */
+  width: 100%;                   /* 가로 길이를 화면 전체로 설정 */
+  background-color: pink; 
+  background: linear-gradient(
+    rgb(231, 199, 215),          /* 위에서 분홍색 */
+    rgba(18, 18, 18, 1)               /* 아래쪽은 검정색 반투명 */
+  );
+  position: relative; 
+}
+
+.background_img {
+  position: absolute;                /* 절대 위치 지정 */
+  top: 0;                            /* 분홍색 바의 상단에 배치 */
+  right: 0;                          /* 오른쪽 끝에 위치 */
+  width: 50%;                        /* 이미지 크기 설정 (필요에 따라 조정) */
+  height: auto;                      /* 비율에 맞게 높이 자동 조정 */
+}
+
+.TxT {
+  position: absolute;                /* 절대 위치 지정 */
+  top: 60%; 
+  margin-left: 200px;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.sub_text {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.two_btn {
+  position: absolute;    
+  margin-left: 200px;
+  margin-top: 180px;
+}
+
+.start_btn {
+  border-radius: 25px;
+  height: 50px;
+  width: 110px;
+  background-color: rgb(238, 202, 227);
+}
+
+.fee_btn {
+  border-radius: 25px;
+  height: 50px;
+  width: 160px;
+  background-color: black;
+  color: aliceblue;
+  margin-left: 10px;
+
+}
