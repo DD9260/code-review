@@ -112,7 +112,7 @@ a:link {
 
 .second_title {
   position: absolute; 
-  margin-left: 440px;
+  margin-left: 430px;
   margin-top: 400px;
   text-align: center;
   border-collapse: collapse;
@@ -123,7 +123,7 @@ a:link {
   position: absolute; 
   text-align: center;
   width: 40%; /* 테이블 너비를 80%로 설정 */
-  margin-left: 480px;
+  margin-left: 465px;
   margin-top: 530px;
   border-collapse: collapse;
   padding: 60px;
