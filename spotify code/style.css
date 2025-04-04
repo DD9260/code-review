@@ -44,7 +44,7 @@ body {
   width: 100%;                   /* 가로 길이를 화면 전체로 설정 */
   background-color: pink; 
   background: linear-gradient(
-    rgb(231, 199, 215),          /* 위에서 분홍색 */
+    rgb(176, 145, 161),          /* 위에서 분홍색 */
     rgba(18, 18, 18, 1)               /* 아래쪽은 검정색 반투명 */
   );
   position: relative; 
@@ -84,6 +84,7 @@ body {
   height: 50px;
   width: 110px;
   background-color: rgb(238, 202, 227);
+  border: none;
 }
 
 .fee_btn {
@@ -93,5 +94,87 @@ body {
   background-color: black;
   color: aliceblue;
   margin-left: 10px;
+  border-width: 1px;
+  border-color: aliceblue;
+  border-style: solid;
+}
 
+.small_text {
+  position: absolute;  
+  font-size: 10px;
+  margin-left: 200px;
+  margin-top: 270px;
+}
+
+a:link {
+  color: aliceblue;
+}
+
+.second_title {
+  position: absolute; 
+  margin-left: 450px;
+  margin-top: 400px;
+  text-align: center;
+  border-collapse: collapse;
+
+}
+
+.show_chart {
+  position: absolute; 
+  text-align: center;
+  width: 40%; /* 테이블 너비를 80%로 설정 */
+  margin-left: 480px;
+  margin-top: 530px;
+  border-collapse: collapse;
+  padding: 60px;
+  font-size: 15px;
+}
+
+table {
+  width: 100%; /* 테이블 너비를 100%로 설정 */
+  border-spacing: 0; /* 셀 간의 간격을 없앰 */
+}
+
+.dash_icon {
+  width: 15%;
+  filter: invert(100%);
+}
+
+.check_icon {
+  width: 30%;
+  filter: invert(100%);
+}
+
+.under_line {
+  text-decoration: underline dotted rgb(255, 255, 255);
+}
+
+td {
+  padding: 11px; /* 셀 안의 여백을 줄여줌 */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  border-top: 1px solid #fff;  /* 상단 테두리 */
+  border-bottom: 1px solid #fff; /* 하단 테두리 */
+  border-left: 1px none;  
+  border-right: 1px none;  
+}
+
+th {
+  padding: 11px; 
+  text-align: center;
+}
+
+/* 왼쪽 열 */
+th:first-child, td:first-child {
+  width: 40%; /* 왼쪽 열을 더 넓게 */
+  text-align: left !important;
+}
+
+/* 가운데 열 */
+th:nth-child(2), td:nth-child(2) {
+  width: 30%; /* 가운데 열을 좁게 */
+}
+
+/* 오른쪽 열 */
+th:nth-child(3), td:nth-child(3) {
+  width: 30%; /* 오른쪽 열을 기본 너비로 */
 }
