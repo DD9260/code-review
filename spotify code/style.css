@@ -429,3 +429,24 @@ ul {
   gap: 10px;
   margin-top: 120px;
 }
+
+.main_q {
+  font-size: 30px;
+}
+
+.sub_q,
+.sub_q_2 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.QnA_Btn_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-top: 20px;
+  height: 200px;
+  background-color: black;
+}
