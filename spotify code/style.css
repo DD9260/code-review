@@ -480,6 +480,7 @@ ul {
 footer {
   background-color: black;
   padding: 50px 190px 50px 190px;
+  margin-top: 60px;
 }
 
 .main_logo_2 img {
@@ -492,7 +493,6 @@ footer {
   display: flex;
   justify-content: center;
   gap: 100px;
-  
 }
 
 
@@ -501,7 +501,18 @@ footer {
   justify-content: space-between;
   flex-direction: row;
   gap: 30px 60px;
+}
 
+.footer_container ul li {
+  margin-bottom: 20px; /* 원하는 만큼 여백 조절 가능 */
+}
+
+.f_T {
+  color: rgb(145, 145, 145);
+}
+
+.footer_container a {
+  text-decoration: none;
 }
 
 .sns_collection {
@@ -514,8 +525,63 @@ footer {
 .facebook_Btn {
   width: 60px;
   height: 60px;
+  background-color: rgb(35, 35, 35);
+  border-radius: 50px;
+  border: none;
 }
 
 .sns_collection i {
-  font-size: 32px; /* 원하는 크기로 조절 */
+  color: white;
+  font-size: 24px; 
+}
+
+
+.footer_sub {
+  margin-top: 120px;
+}
+
+.footer_sub_menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer_sub_menu a {
+  text-decoration: none;
+}
+
+.nation_tag {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+
+.nation_tag a {
+  text-decoration: none;
+  color: rgb(145, 145, 145);
+}
+
+.sub_content {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.sub_content a {
+  color: rgb(145, 145, 145);
+}
+
+.years_tag {
+  font-size: 12px;
+  color: rgb(145, 145, 145);
+}
+
+.last_footer_content {
+  font-size: 10px;
+  margin-top: 40px;
+  color: rgb(145, 145, 145);
+}
+
+.last_footer_content a {
+  color: rgb(145, 145, 145);
 }
