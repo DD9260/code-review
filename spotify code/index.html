@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spotify</title>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="reset" href="reset.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -15,12 +16,26 @@
           <img src="../spotify img/spotify.png" alt="mainLogo">
         </div>
         <div class="top_btn">
-          <btn>프리미엄</btn>
-          <btn>지원</btn>
-          <btn>다운로드하기</btn>
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <span class="hover_01">프리미엄</span>
+            </button>
+            <div class="dropdown-menu">
+              <button class="dropdown-option">
+                <strong>Premium 개인</strong><br>
+                <span>개인 사용자를 위한 계정 1개</span>
+              </button>
+              <button class="dropdown-option">
+                <strong>Premium 듀오</strong><br>
+                <span>한 지붕 아래 사는 커플을 위한 계정 2개</span>
+              </button>
+            </div>
+          </div>      
+          <button class="top_main_menu">지원</button>
+          <button class="top_main_menu">다운로드하기</button>
           <p>|</p>
-          <btn>가입하기</btn>
-          <btn>로그인하기</btn>
+          <button class="top_main_menu">가입하기</button>
+          <button class="top_main_menu">로그인하기</button>
         </div>
       </div> 
     </header>
@@ -53,40 +68,42 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">수백만 개의 곡감상</td>
+                  <span class="tooltip-text">여러분이 원하는 모든 음악이 있습니다.</span> 
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">무광고로 음악 감상하기</td>
+                  <span class="tooltip-text">중간 광고 없이 음악을 감상하세요.</span>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">다운로드하여 오프라인에서<br>감상</td>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">순서에 상관없이 재생</td>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">뛰어난 음질</td>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">친구와 함께 실시간으로 감<br>상</td>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
-              <tr>
+              <tr class="horizontal">
                 <td class="under_line">재생목록 관리</td>
                 <td><img src="../spotify img/pngegg.png" alt="-" class="dash_icon"></td>
-                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="thrid_icon"><i class="fa-solid fa-circle-check"></i></td>
               </tr>
             </tbody>
           </table>
@@ -235,6 +252,6 @@
         <div class="last_footer_content"><h3>스포티파이 에이비, Regeringsgatan 19, 111 53 Stockholm, Sweden | 대표: 다니엘 에크 | 사업자등록번호: 556703-7485 (스웨덴) | 통신판매업 신고번호: 2024-공정-0007 <a href="#">(사업자정보)</a> | 고객지원문의 +82 1533 6552 및<br> support@spotify.com | 호스팅서비스제공자: Google LLC</h3></div>
       </div>
     </footer>
-   
+<script src="./script.js"></script>
 </body>
 </html>
