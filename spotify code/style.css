@@ -171,6 +171,43 @@ a:link {
   color: aliceblue;
 }
 
+.under_line {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  max-width: 300px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+
+  /* 툴팁 위치 조정 */
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 10px; /* 약간 오른쪽 여백 */
+  z-index: 100;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 호버 시 보여주기 */
+.under_line:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .second_title {
   padding: 0 400px;
   margin-top: 150px;
@@ -268,16 +305,54 @@ th:nth-child(3), td:nth-child(3) {
 .card_img {
   width: 100%;    
   margin-top: 20px;
+  display: flex;  
+  justify-content: center;
+  gap:8px;
+  margin-bottom: 10px;
 }
 
 .card_img img {
-  width: 50%;   /* 부모 요소의 100% 크기로 이미지 크기를 조정 */
+  width: 8%;   /* 부모 요소의 100% 크기로 이미지 크기를 조정 */
   height: auto;  /* 비율을 유지하면서 높이 자동 조정 */
 }
 
 .seven_cards {
   text-decoration: underline;
 }
+
+.seven_cards {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card_collection {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 100;
+  white-space: nowrap;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.seven_cards:hover .card_collection {
+  display: block;             
+
+}
+
+.card_collection img {
+  width: 50px;
+  margin-right: 5px;
+}
+
 
 .Premium_fee {
   padding: 0 330px;
@@ -507,6 +582,12 @@ ul {
   font-size: 30px;
 }
 
+.pink_Btn:hover,
+.yellow_Btn:hover,
+.green_Btn:hover {
+  transform: scale(1.05);
+}
+
 .sub_q,
 .sub_q_2 {
   font-size: 15px;
@@ -522,6 +603,7 @@ ul {
   margin-top: 25px;
   height: 280px;
   background-color: black;
+  /* flex-shrink: 0; */
 }
 
 .QnA_1,
@@ -540,6 +622,26 @@ ul {
   display: flex;
   align-items: center;
 } 
+
+.QnA_content {
+  display: none;              /* 기본적으로 숨김 */
+  background-color: #1e1e1e;  /* 버튼보다 약간 밝은 색 */
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  border-top: 1px solid #333;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.QnA_Btn_box button.active {
+  background-color: #292929; /* 클릭 시 살짝 색 다르게 */
+}
+
+.QnA_Btn_box button.active i {
+  /* transform: rotate(180deg);  */
+  transition: transform 0.1s ease;
+}
 
 .line_2 {
   height: 1px; /* 또는 1px */
@@ -654,4 +756,13 @@ footer {
 
 .last_footer_content a {
   color: rgb(145, 145, 145);
+}
+
+.footer_container a:hover {
+  color: #20da52;
+}
+
+.footer_sub_menu a:hover,
+.nation_Btn:hover {
+  color: #20da52;
 }
