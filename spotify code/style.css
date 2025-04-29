@@ -6,11 +6,15 @@
 
 body {
   background-color: rgb(18, 18, 18);
-  color: aliceblue;
+  color: aliceblue; 
+  overflow-x: hidden;
 }
 
 .dropdown {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .dropdown-menu {
@@ -23,6 +27,7 @@ body {
   flex-direction: column;
   width: 220px;
   z-index: 999;
+  /* margin-top: 25px; */
 }
 
 .dropdown-option {
@@ -65,7 +70,7 @@ body {
 }
 
 .start_btn:hover {
-  background-color: #a07f9b;
+  background-color: #632175;
   transform: scale(1.05);
 }
 
@@ -81,6 +86,7 @@ body {
   width: 100%;  
   padding: 0px 180px;
   height: 70px;
+  position: relative;
 }
 
 .main_logo {
@@ -99,32 +105,38 @@ body {
   display: flex; 
 }
 
+.hidden_menu_bar {
+  display: none;
+}
+
 .main_text {
   position: relative;  /* main_text가 기준이 되도록 설정 */
 }
 
 .pink_bar {
-  height: 120px;                  /* 높이를 80px로 설정 */
+  height: 180px;                  /* 높이를 80px로 설정 */
   width: 100%;                   /* 가로 길이를 화면 전체로 설정 */
-  background-color: pink; 
+  background-color: rgb(117, 43, 130); 
   background: linear-gradient(
-    rgb(176, 145, 161),          /* 위에서 분홍색 */
+    rgb(117, 43, 130),          /* 위에서 분홍색 */
     rgba(18, 18, 18, 1)               /* 아래쪽은 검정색 반투명 */
   );
 }
 
 .background_img {
-  position: absolute;                /* 절대 위치 지정 */
-  top: 0;                            /* 분홍색 바의 상단에 배치 */
-  right: 0;                          /* 오른쪽 끝에 위치 */
-  width: 50%;                        /* 이미지 크기 설정 (필요에 따라 조정) */
+  position: relative;
+  z-index: 2;                /* 절대 위치 지정 */
+  margin-top: -70px;
+  margin-left: 880px;
+  width: 240px;                        /* 이미지 크기 설정 (필요에 따라 조정) */
   height: auto;                      /* 비율에 맞게 높이 자동 조정 */
+
 }
 
 .TxT {
   top: 60%; 
   padding: 0px 200px;
-  margin-top: -40px;
+  margin-top: -280px;
 }
 
 .title {
@@ -146,8 +158,9 @@ body {
   border-radius: 25px;
   height: 50px;
   width: 110px;
-  background-color: rgb(238, 202, 227);
+  background-color: rgb(131, 47, 162);
   border: none;
+  color: aliceblue;
 }
 
 .fee_btn {
@@ -597,12 +610,13 @@ ul {
 .QnA_Btn_box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-left: 170px;
   margin-right: 170px;
   margin-top: 25px;
-  height: 280px;
-  background-color: black;
+  /* height: 280px; */
+  background-color: rgb(30, 30, 30);
+  height: auto;
   /* flex-shrink: 0; */
 }
 
@@ -618,20 +632,44 @@ ul {
   padding-left: 10px;
   padding-right: 10px;
   border: none;
+  padding: 20px 10px;
   justify-content: space-between;
   display: flex;
   align-items: center;
 } 
+
+.QnA_1:hover .Q_1,
+.QnA_2:hover .Q_2,
+.QnA_3:hover .Q_3,
+.QnA_4:hover .Q_4 {
+  text-decoration: underline;
+  cursor: pointer; /* 마우스 커서 포인터로 변경 */
+}
+
+.QnA_1:hover,
+.QnA_2:hover,
+.QnA_3:hover,
+.QnA_4:hover {
+  background-color:rgb(30, 30, 30);
+}
 
 .QnA_content {
   display: none;              /* 기본적으로 숨김 */
   background-color: #1e1e1e;  /* 버튼보다 약간 밝은 색 */
   color: #fff;
   font-size: 15px;
-  padding: 10px;
+  padding: 50px;
   border-top: 1px solid #333;
   line-height: 1.5;
   text-align: center;
+  
+}
+
+.content_1,
+.content_2,
+.content_3,
+.content_4 {
+  padding: 20px 30px;
 }
 
 .QnA_Btn_box button.active {
@@ -765,4 +803,85 @@ footer {
 .footer_sub_menu a:hover,
 .nation_Btn:hover {
   color: #20da52;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .top_btn {
+    display: none;
+  }
+
+  .hidden_menu_bar {
+    display: flex;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 25px;
+    padding-right: 25px;
+  }
+
+  .background_img {
+    margin-left: 550px;
+    width: 240px;                        /* 이미지 크기 설정 (필요에 따라 조정) */
+    height: auto; 
+    position: relative;
+    z-index: 2;
+  }
+
+  
+  .top_function {
+    padding: 0px 0px;
+  }
+
+  .TxT {
+    padding: 0 30px;
+    
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .small_text {
+    text-align: left;
+  }
+
+  .two_btn {
+    padding: 0px 30px;
+  }
+
+  .small_text {
+
+    margin: 0;               /* 가운데 정렬 제거 */
+    text-align: left;        /* 텍스트 왼쪽 정렬 */
+    padding-left: 30px;      /* 원하는 만큼 왼쪽 여백 */
+   
+  }
+
+  .second_title {
+    display: flex;
+    flex-direction: row; /* 가로 방향으로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    gap: 20px; /* 요소 사이 간격 */
+    flex-wrap: wrap; /* 반응형으로 줄 바꿈 허용 */
+  }
+  
+  .second_title .title,
+  .second_title .sub_text_2 {
+    margin: 0;
+    white-space: nowrap; /* 줄바꿈 방지 */
+  }
+
+ .show_chart {
+  display: flex;
+  justify-content: center; 
+  flex-direction: row; 
+  align-items: center; 
+  width: 100%;
+ }
+
+ .show_chart > * {
+  display: inline-block;
+  margin: 0 10px; 
 }
