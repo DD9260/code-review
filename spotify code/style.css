@@ -873,15 +873,63 @@ footer {
     white-space: nowrap; /* 줄바꿈 방지 */
   }
 
- .show_chart {
-  display: flex;
-  justify-content: center; 
-  flex-direction: row; 
-  align-items: center; 
-  width: 100%;
- }
+  .show_chart {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .table_1 {
+    margin: 0 auto;
+    width: 600px;
+  }
+  
+  .table {
+    min-width: 600px;
+    /* width: 100%; */
+  }
 
- .show_chart > * {
-  display: inline-block;
-  margin: 0 10px; 
+  .third_text {
+    display: flex;
+    flex-direction: row; /* 가로 방향으로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+   
+    flex-wrap: wrap; /* 반응형으로 줄 바꿈 허용 */
+  }
+
+  .Premium_fee {
+    display: flex;
+   
+  }
+      
+  .Premium_fee_mainText {
+    font-size: 25px;
+  }
+
+  .card_img {
+    width: 50px;    
+    margin-top: 20px;
+    display: flex;  
+    justify-content: center;
+    gap:8px;
+    margin-bottom: 10px;
+  }
+  
+  .card_img img {
+    width: 50px;   /* 부모 요소의 100% 크기로 이미지 크기를 조정 */
+    height: auto;  /* 비율을 유지하면서 높이 자동 조정 */
+  }
+
+
+}
+  
+  
+
+
+
+@media screen and (max-width: 768px) {
+  
 }
